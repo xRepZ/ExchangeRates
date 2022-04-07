@@ -1,4 +1,4 @@
-package main //сделать структуру(CurrencyConvertes Convert()), с методом, покрыть тестами // https://pkg.go.dev/net/http/httptest //докер
+package main
 
 import (
 	"encoding/xml"
@@ -30,7 +30,7 @@ type ValCurs struct {
 	Currencies  []Currency `xml:"Valute"`
 }
 
-func getBody(url string) ([]byte, error) { //todo сделать таймаут, вынести в константу
+func getBody(url string) ([]byte, error) {
 
 	resp, err := http.Get(url)
 
